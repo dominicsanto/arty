@@ -8,7 +8,6 @@ import Types exposing (..)
 import Update exposing (init, update)
 import View exposing (view)
 
-
 main : Program () Model Msg
 main =
     Browser.application
