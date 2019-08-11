@@ -11,7 +11,7 @@ import RemoteData exposing (..)
 view : Model -> Element Msg
 view model =
   let
-      _= Debug.log "hit" "hit"
+      _= Debug.log "You got session" model.session
   in
 
     column [ spacing 5 ]

@@ -1,7 +1,7 @@
 module View exposing (renderRoute, view)
 
 import Browser
-import Cats.View
+import Home.View
 import Element exposing (..)
 import Element.Events exposing (..)
 import Element.Input exposing (button)
@@ -25,10 +25,7 @@ renderRoute : Model -> Element Types.Msg
 renderRoute model =
     case model.router.page of
         Home ->
-            column
-                [ spacing 5 ]
-                [ el ([ heading 1 ]) (text "Welcome To Arty")
-                ]
+            Element.map HomeNoOp (Home.View.view model.home)
 
         NotFound ->
             text "404 Not Found"

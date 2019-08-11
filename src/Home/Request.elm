@@ -17,7 +17,7 @@ getSpotifyToken =
     in
     Http.request
         { method = "POST"
-        , headers = [ Http.header "Authorization" ("Basic " ++ Api.base64EncodedKey) ]
+        , headers = [ Http.header "Authorization" ("Basic " ++ Api.base64EncodedKey), Http.header "Access-Control-Allow-Origin" "*" ]
         , body = Http.emptyBody
         , url = "https://accounts.spotify.com/api/token"
         , expect = Http.expectJson returnMsg decodeToken
@@ -28,5 +28,5 @@ getSpotifyToken =
 
 decodeToken : Decoder Session
 decodeToken =
-  Decode.succeed Session
-    |> required "access_token" Decode.string
+    Decode.succeed Session
+        |> required "access_token" Decode.string

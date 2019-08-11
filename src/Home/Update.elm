@@ -15,7 +15,7 @@ init =
         { noOp = "Home"
         , session = NotAsked
         }
-        Cmd.none
+        getSpotifyToken
 
 
 update : Types.Msg -> Model -> Return Msg Model
