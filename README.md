@@ -1,6 +1,6 @@
 # Arty
 
-Arty is a vanilla Elm application which serves a purpose of filtering any current Artists on Spotify and returning all ones that are similar.
+Arty is a vanilla Elm application which serves a purpose of filtering any current Artists on Spotify and returning ones that are similar.
 
 ## Getting Started
 
