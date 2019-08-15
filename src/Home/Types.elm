@@ -5,9 +5,10 @@ import RemoteData exposing (..)
 
 
 type alias Model =
-    { noOp : String
+    { artistName : String
     }
 
 
 type Msg
     = HomeNoOp
+    | UpdateArtistName String

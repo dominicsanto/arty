@@ -10,8 +10,9 @@ import Types
 init : Return Msg Model
 init =
     return
-        { noOp = "Home"
-        } Cmd.none
+        { artistName = ""
+        }
+        Cmd.none
 
 
 update : Types.Msg -> Model -> Return Msg Model
@@ -29,3 +30,6 @@ updateHome msg model =
     case msg of
         HomeNoOp ->
             return model Cmd.none
+
+        UpdateArtistName newName ->
+            return { model | artistName = newName } Cmd.none
